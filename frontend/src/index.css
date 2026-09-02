@@ -2,28 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-[#0b0f19] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #0b1120;
+  overflow: hidden;
 }
 
 .leaflet-container {
   width: 100%;
   height: 100%;
-  background: #0f172a;
+  background: #090d16 !important;
 }
 
 /* Custom dark popup styling */
 .leaflet-popup-content-wrapper {
-  background: #1e293b !important;
+  background: rgba(13, 19, 33, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
   color: #f8fafc !important;
-  border: 1px solid #334155;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.7) !important;
 }
 .leaflet-popup-tip {
-  background: #1e293b !important;
+  background: #0d1321 !important;
+}
+
+/* Striped hazard pattern */
+.striped-hazard-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(239, 68, 68, 0.25),
+    rgba(239, 68, 68, 0.25) 6px,
+    rgba(220, 38, 38, 0.5) 6px,
+    rgba(220, 38, 38, 0.5) 12px
+  );
+}
+
+.striped-chart-bar {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(20, 184, 166, 0.4),
+    rgba(20, 184, 166, 0.4) 3px,
+    rgba(13, 148, 136, 0.8) 3px,
+    rgba(13, 148, 136, 0.8) 6px
+  );
+}
+
+.striped-chart-bar-active {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(56, 189, 248, 0.6),
+    rgba(56, 189, 248, 0.6) 3px,
+    rgba(14, 165, 233, 0.95) 3px,
+    rgba(14, 165, 233, 0.95) 6px
+  );
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@keyframes pulse-radar {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.radar-pulse {
+  animation: pulse-radar 2.5s infinite ease-in-out;
 }
