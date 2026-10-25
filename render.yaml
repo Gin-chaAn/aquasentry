@@ -16,11 +16,10 @@ services:
       - key: ORS_API_KEY
         sync: false
 
-  # 2. AquaSentry React Leaflet Frontend
+  # 2. AquaSentry React Leaflet Frontend (Static Site - no plan attribute needed)
   - type: web
     name: aquasentry-frontend
     runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
