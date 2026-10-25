@@ -1,0 +1,289 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Adyar River Basin Corridor (Saidapet - Kotturpuram)",
+        "risk_category": "High",
+        "description": "Frequent river overflow catchment zone along Adyar riverbanks"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.2,
+              13.0
+            ],
+            [
+              80.255,
+              13.005
+            ],
+            [
+              80.26,
+              13.028
+            ],
+            [
+              80.22,
+              13.03
+            ],
+            [
+              80.198,
+              13.015
+            ],
+            [
+              80.2,
+              13.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Cooum River Basin Corridor (Koyambedu - Aminjikarai)",
+        "risk_category": "High",
+        "description": "Low-lying floodway corridor along Cooum river"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.18,
+              13.06
+            ],
+            [
+              80.24,
+              13.062
+            ],
+            [
+              80.242,
+              13.085
+            ],
+            [
+              80.19,
+              13.085
+            ],
+            [
+              80.18,
+              13.06
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Velachery - Pallikaranai Marsh Catchment",
+        "risk_category": "High",
+        "description": "Natural lake basin with high waterlogging history"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.2,
+              12.96
+            ],
+            [
+              80.245,
+              12.96
+            ],
+            [
+              80.245,
+              12.998
+            ],
+            [
+              80.205,
+              12.998
+            ],
+            [
+              80.2,
+              12.96
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Mudichur - Tambaram Basin",
+        "risk_category": "High",
+        "description": "Adyar river headwaters and lake surplus overflow zone"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.06,
+              12.9
+            ],
+            [
+              80.13,
+              12.9
+            ],
+            [
+              80.135,
+              12.945
+            ],
+            [
+              80.065,
+              12.945
+            ],
+            [
+              80.06,
+              12.9
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Madipakkam Lake Catchment",
+        "risk_category": "Moderate",
+        "description": "Residential low-lying lake bed surroundings"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.18,
+              12.95
+            ],
+            [
+              80.21,
+              12.95
+            ],
+            [
+              80.21,
+              12.978
+            ],
+            [
+              80.18,
+              12.978
+            ],
+            [
+              80.18,
+              12.95
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "North Chennai Canal Basin (Perambur - Vyasarpadi)",
+        "risk_category": "Moderate",
+        "description": "Otteri Nullah and Buckingham Canal catchment"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.225,
+              13.095
+            ],
+            [
+              80.275,
+              13.095
+            ],
+            [
+              80.275,
+              13.135
+            ],
+            [
+              80.225,
+              13.135
+            ],
+            [
+              80.225,
+              13.095
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "T. Nagar Commercial Basin",
+        "risk_category": "Moderate",
+        "description": "Micro-catchment prone to street flooding during cloudbursts"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.22,
+              13.035
+            ],
+            [
+              80.245,
+              13.035
+            ],
+            [
+              80.245,
+              13.055
+            ],
+            [
+              80.22,
+              13.055
+            ],
+            [
+              80.22,
+              13.035
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Mylapore - Marina Coastal Elevated Ridge",
+        "risk_category": "Low",
+        "description": "Naturally elevated sandy soil with direct sea runoff"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.265,
+              13.03
+            ],
+            [
+              80.295,
+              13.03
+            ],
+            [
+              80.295,
+              13.065
+            ],
+            [
+              80.265,
+              13.065
+            ],
+            [
+              80.265,
+              13.03
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,10 @@
-const API_BASE = "http://127.0.0.1:8000/api";
+let base = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://127.0.0.1:8000" : "");
+
+if (base && !base.startsWith("http://") && !base.startsWith("https://") && !base.startsWith("/")) {
+  base = `https://${base}`;
+}
+
+const API_BASE = base ? (base.endsWith("/api") ? base : `${base.replace(/\/$/, "")}/api`) : "/api";
 
 export async function fetchHeatmap() {
   const res = await fetch(`${API_BASE}/heatmap`);

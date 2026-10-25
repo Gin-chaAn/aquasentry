@@ -1,0 +1,36 @@
+services:
+  # 1. AquaSentry FastAPI Backend API
+  - type: web
+    name: aquasentry-backend
+    runtime: python
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: ORS_API_KEY
+        sync: false
+
+  # 2. AquaSentry React Leaflet Frontend
+  - type: web
+    name: aquasentry-frontend
+    runtime: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: aquasentry-backend
+          property: host

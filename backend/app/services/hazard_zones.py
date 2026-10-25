@@ -26,10 +26,12 @@ class HazardZoneService:
         candidates = [
             self.geojson_path,
             Path(self.geojson_path).resolve() if self.geojson_path else None,
+            Path(__file__).resolve().parents[1] / "data" / "chennai_hazard_zones.geojson",
+            Path(__file__).resolve().parents[2] / "data" / "chennai_hazard_zones.geojson",
             Path(__file__).resolve().parents[3] / "data" / "chennai_hazard_zones.geojson",
             Path.cwd() / "data" / "chennai_hazard_zones.geojson",
+            Path.cwd() / "backend" / "data" / "chennai_hazard_zones.geojson",
             Path.cwd().parent / "data" / "chennai_hazard_zones.geojson",
-            Path("C:/Users/vedpr/.gemini/antigravity/scratch/aquasentry/data/chennai_hazard_zones.geojson"),
         ]
 
         for p in candidates:
